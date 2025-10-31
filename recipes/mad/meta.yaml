@@ -1,0 +1,33 @@
+{% set version = "2.2" %}
+{% set sha256 = "1e0b946a82c7d23045310294d8398a7b611ca468a041b4bc36d9425e38e8419a" %}
+
+package:
+  name: mad
+  version: {{ version }}
+
+source:
+  url: https://www.mikrobio.uni-kiel.de/de/ag-dagan/ressourcen/mad2-2.zip
+  sha256: {{ sha256 }}
+
+build:
+  noarch: generic
+
+requirements:
+  run:
+    - python >=3.4.3
+
+test:
+  commands:
+    - mad -v > /dev/null
+    - mad.py > /dev/null
+
+about:
+  home: https://www.mikrobio.uni-kiel.de/de/ag-dagan/ressourcen
+  license: 
+  summary: 'MAD phylogenetic rooting.'
+
+extra:
+  recipe-maintainers:
+    - fdecarpentier
+  identifiers:
+    - doi:10.1038/s41559-017-0193
