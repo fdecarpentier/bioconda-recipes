@@ -18,8 +18,8 @@ requirements:
 
 test:
   commands:
-    - mad -v > /dev/null
-    - mad.py > /dev/null
+    - mad -v | grep 'mad 2.2' > /dev/null
+    - mad.py -v | grep 'mad 2.2' > /dev/null
 
 about:
   home: https://www.mikrobio.uni-kiel.de/de/ag-dagan/ressourcen

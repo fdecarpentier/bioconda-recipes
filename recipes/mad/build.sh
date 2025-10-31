@@ -1,3 +1,2 @@
 mkdir -p $PREFIX/bin
-cp mad $PREFIX/bin
-cp mad.py $PREFIX/bin
+cp mad mad.py mad.osx $PREFIX/bin
